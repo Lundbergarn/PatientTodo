@@ -1,0 +1,51 @@
+.btn {
+  font-size: 22px;
+}
+.card-title {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+input[type=checkbox] {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 5px;
+}
+.card, .btn {
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.form-group {
+  width: 90%;
+  margin: 0 auto;
+}
+.form__todo {
+  font-size: 18px;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e3e3e3;
+}
+.form__todo_label {
+  width: 100%;
+  margin-bottom: 0;
+}
+.form__input_todo {
+  position: static;
+  margin-right: 20px;
+  margin-top: 0;
+}
+.form-check-input {
+  margin-top: 0;
+}
+.patient__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 450px) {
+  .patient__list .card {
+    width: 100%;
+  }
+}

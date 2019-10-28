@@ -1,0 +1,16 @@
+.red, .green, .yellow {
+  font-size: 2rem;
+}
+.red, .red:hover {
+  background: rgb(143, 19, 19);
+  border-color: rgb(143, 19, 19);
+}
+.green, .green:hover {
+  background: rgb(18, 116, 18);
+  border-color: rgb(18, 116, 18);
+}
+.yellow, .yellow:hover {
+  background: rgb(250, 227, 23);
+  border-color: rgb(250, 227, 23);
+  color: #333;
+}
