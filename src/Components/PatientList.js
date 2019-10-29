@@ -125,7 +125,7 @@ function PatientList() {
                             onClick={() => toPatientHandle(patient)}
                             variant="info"
                           >
-                            Till patient
+                            Todo
                         </Button>
 
                           <RemoveModal

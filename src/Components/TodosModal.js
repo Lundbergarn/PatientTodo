@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap';
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Form,
+  FormGroup,
+  Label,
+  Input
+} from 'reactstrap';
+
 
 const TodosModal = (props) => {
   const [extra, setExtra] = useState('');
@@ -67,7 +77,6 @@ const TodosModal = (props) => {
         <ModalBody>
           <Form onSubmit={onSubmit}>
             <FormGroup>
-
               {list.map(name => {
                 let keys = [];
                 for (let i = 0; i < props.todos.length; i++) {
@@ -76,7 +85,7 @@ const TodosModal = (props) => {
                 if (keys.includes(name)) {
                   return (
                     <div key={name} className="form__todo">
-                      <Label className="form__todo_label" for="todos">{name}</Label>
+                      <Label className="form__todo_label" for={name}>{name}</Label>
                       <Input
                         className="form__todo_input"
                         type="checkbox"
@@ -89,7 +98,7 @@ const TodosModal = (props) => {
                 } else {
                   return (
                     <div key={name} className="form__todo">
-                      <Label className="form__todo_label" for="todos">{name}</Label>
+                      <Label className="form__todo_label" for={name}>{name}</Label>
                       <Input
                         className="form__todo_input"
                         type="checkbox"
@@ -111,15 +120,11 @@ const TodosModal = (props) => {
                 value={extra}
                 onChange={handleExtra}
               ></Input>
-
               <Button
                 color="info"
                 style={{ marginTop: '2rem' }}
                 block
-              >
-                {props.title}
-              </Button>
-
+              >{props.title}</Button>
             </FormGroup>
           </Form>
         </ModalBody>
