@@ -2,8 +2,8 @@
   text-align: center;
   background: #f4f4f4;
   padding-top: 30px;
-  height: 100vh;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 .App-logo {

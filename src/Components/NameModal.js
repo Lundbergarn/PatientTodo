@@ -15,7 +15,7 @@ const ItemModal = (props) => {
 
   function onSubmit(e) {
     e.preventDefault();
-    props.addPatient(patient);
+    props.submit(patient, props.id);
     setPatient('');
     toggle();
   }
@@ -24,7 +24,7 @@ const ItemModal = (props) => {
     <div>
       <Button
         color="info"
-        style={{ marginBottom: '2rem', height: '50px' }}
+        style={{ height: '50px' }}
         onClick={toggle}
       >{props.title}</Button>
 

@@ -20,7 +20,6 @@ const RemoveModal = (props) => {
     <div>
       <Button
         color="danger"
-        style={{ position: 'absolute', right: '5px', top: '5px' }}
         onClick={toggle}
       >X</Button>
 

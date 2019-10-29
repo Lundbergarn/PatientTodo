@@ -1,20 +1,17 @@
 .btn {
   font-size: 22px;
-}
-.card__remove {
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  cursor: pointer;
-  transition: 0.25s ease;
-}
-.card__remove:hover {
-  color: #dc3545;
+  height: 50px;
+  margin: 2px 10px;
 }
 .card-title {
   font-size: 1.75rem;
   margin: 3rem 0;
 }
+/* .card-body div:first-of-type button {
+  position: absolute;
+  right: 58px;
+  top: 10px;
+} */
 input[type=checkbox] {
   width: 25px;
   height: 25px;

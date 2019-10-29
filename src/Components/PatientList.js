@@ -29,6 +29,18 @@ function PatientList() {
     }
   }, []);
 
+  function changePatientName(name, id) {
+    console.log(name, id)
+    const updateName = list.map(e => {
+      if (e.id === id) {
+        e.title = name;
+      }
+      return e;
+    })
+    setList(updateName);
+    localStorage.setItem('patientsList', JSON.stringify(updateName));
+  }
+
   // Add new patient
   function addPatient(title) {
     if (title) {
@@ -82,7 +94,7 @@ function PatientList() {
           <Container>
             <NameModal
               title="Lägg till patient"
-              addPatient={addPatient}
+              submit={addPatient}
             />
             <div className="patient__list">
               {
@@ -90,7 +102,8 @@ function PatientList() {
                   return (
                     <Card key={patient.id} style={{ minWidth: '25%', flexBasis: '1', margin: '1rem' }}>
                       <Card.Body>
-                        <RemoveModal patient={patient.id} removePatientHandler={removePatientHandler} />
+
+
 
                         {patient.activities > 0 ?
                           <Card.Title style={{ color: '#dc3545' }}>{patient.title} - {patient.activities}</Card.Title>
@@ -99,12 +112,29 @@ function PatientList() {
                         }
                         {/* <Card.Text>Some quick example text.</Card.Text> */}
 
-                        <Button
-                          onClick={() => toPatientHandle(patient)}
-                          variant="info"
-                        >
-                          Till patient
+                        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+
+                          <NameModal
+                            title="Ändra"
+                            id={patient.id}
+                            submit={changePatientName}
+                            className="card__name_modal"
+                          />
+
+                          <Button
+                            onClick={() => toPatientHandle(patient)}
+                            variant="info"
+                          >
+                            Till patient
                         </Button>
+
+                          <RemoveModal
+                            patient={patient.id}
+                            removePatientHandler={removePatientHandler}
+                          />
+
+                        </div>
+
 
                       </Card.Body>
                     </Card>
