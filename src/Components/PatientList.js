@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Container, Card, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import uuid from 'uuid';
+
+import RemoveModal from './RemoveModal';
 import NameModal from './NameModal';
 import Patient from './Patient';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Card, Button } from 'react-bootstrap';
-import uuid from 'uuid';
 import './patientList.css';
-import RemoveModal from './RemoveModal';
 
 function PatientList() {
   const [patientView, setPatientView] = useState(false);
@@ -13,11 +14,7 @@ function PatientList() {
   const [list, setList] = useState([]);
   // const [list, setList] = useState([
   //   { id: uuid(), title: 'Pelle', activities: 0, todos: [] },
-  //   { id: uuid(), title: 'Bamse', activities: 0, todos: [] },
-  //   { id: uuid(), title: 'Morran', activities: 0, todos: [] },
-  //   { id: uuid(), title: 'Murre', activities: 0, todos: [] },
-  //   { id: uuid(), title: 'Gustav', activities: 0, todos: [] },
-  //   { id: uuid(), title: 'Lyssa', activities: 0, todos: [] }
+  //   { id: uuid(), title: 'Bamse', activities: 0, todos: [] }
   // ]);
 
   useEffect(() => {
@@ -30,7 +27,6 @@ function PatientList() {
   }, []);
 
   function changePatientName(name, id) {
-    console.log(name, id)
     const updateName = list.map(e => {
       if (e.id === id) {
         e.title = name;
@@ -68,7 +64,6 @@ function PatientList() {
     setPatient(el)
   }
 
-
   function addTodosState(input, id) {
     const update = list.map(el => {
       if (el.id === id) {
@@ -103,15 +98,12 @@ function PatientList() {
                     <Card key={patient.id} style={{ minWidth: '25%', flexBasis: '1', margin: '1rem' }}>
                       <Card.Body>
 
-
-
                         {patient.activities > 0 ?
                           <Card.Title style={{ color: '#dc3545' }}>{patient.title} - {patient.activities}</Card.Title>
                           :
                           <Card.Title>{patient.title} - {patient.activities}</Card.Title>
                         }
                         {/* <Card.Text>Some quick example text.</Card.Text> */}
-
                         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
 
                           <NameModal
@@ -134,8 +126,6 @@ function PatientList() {
                           />
 
                         </div>
-
-
                       </Card.Body>
                     </Card>
                   )

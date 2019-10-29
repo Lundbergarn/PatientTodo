@@ -26,12 +26,11 @@ const ItemModal = (props) => {
         color="info"
         style={{ height: '50px' }}
         onClick={toggle}
-      >{props.title}</Button>
-
-      <Modal
-        isOpen={modal}
-        toggle={toggle}
       >
+        {props.title}
+      </Button>
+
+      <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>{props.title}</ModalHeader>
         <ModalBody>
           <Form onSubmit={onSubmit}>
@@ -49,7 +48,9 @@ const ItemModal = (props) => {
                 color="info"
                 style={{ marginTop: '2rem' }}
                 block
-              >{props.title}</Button>
+              >
+                {props.title}
+              </Button>
             </FormGroup>
           </Form>
         </ModalBody>

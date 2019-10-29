@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
-
 const RemoveModal = (props) => {
 
   const [modal, setModal] = useState(false);
@@ -18,15 +17,9 @@ const RemoveModal = (props) => {
 
   return (
     <div>
-      <Button
-        color="danger"
-        onClick={toggle}
-      >X</Button>
+      <Button color="danger" onClick={toggle}> X </Button>
 
-      <Modal
-        isOpen={modal}
-        toggle={toggle}
-      >
+      <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Vill du ta bort patient?</ModalHeader>
         <ModalBody>
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import TodosModal from './TodosModal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from 'react-bootstrap';
+
+import TodosModal from './TodosModal';
 import Todo from './Todo';
 
 function Patient({ patient, addTodosState }) {
@@ -20,7 +21,6 @@ function Patient({ patient, addTodosState }) {
         setTodos(updateTodo('red', name))
     }
   }
-
 
   // Add todos to list
   function addTodos(input) {
