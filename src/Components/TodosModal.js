@@ -1,15 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Form,
-  FormGroup,
-  Label,
-  Input
-} from 'reactstrap';
-
+import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const TodosModal = (props) => {
   const [extra, setExtra] = useState('');
@@ -121,11 +111,15 @@ const TodosModal = (props) => {
                 value={extra}
                 onChange={handleExtra}
               ></Input>
+
               <Button
                 color="info"
                 style={{ marginTop: '2rem' }}
                 block
-              >{props.title}</Button>
+              >
+                {props.title}
+              </Button>
+
             </FormGroup>
           </Form>
         </ModalBody>

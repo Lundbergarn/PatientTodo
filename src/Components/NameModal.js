@@ -1,18 +1,8 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Form,
-  FormGroup,
-  Label,
-  Input
-} from 'reactstrap';
-
+import { Button, Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const ItemModal = (props) => {
-  const [patient, setpatient] = useState('');
+  const [patient, setPatient] = useState('');
   const [modal, setModal] = useState(false);
 
   function toggle() {
@@ -20,12 +10,13 @@ const ItemModal = (props) => {
   }
 
   function onChange(e) {
-    setpatient(e.target.value);
+    setPatient(e.target.value);
   }
 
   function onSubmit(e) {
     e.preventDefault();
     props.addPatient(patient);
+    setPatient('');
     toggle();
   }
 
