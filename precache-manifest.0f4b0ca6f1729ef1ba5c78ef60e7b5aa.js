@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "556e7efea01ceac3c69347278a436930",
+    "revision": "2bbd09738001d60bdef2048719aed36e",
     "url": "/PatientTodo/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PatientTodo/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "0b1962c12626b3cd41c3",
+    "revision": "02f3e039ce8346f7e2de",
     "url": "/PatientTodo/static/css/main.7263d2ae.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PatientTodo/static/js/2.6b85b496.chunk.js"
   },
   {
-    "revision": "0b1962c12626b3cd41c3",
-    "url": "/PatientTodo/static/js/main.36b75ec5.chunk.js"
+    "revision": "02f3e039ce8346f7e2de",
+    "url": "/PatientTodo/static/js/main.6629507f.chunk.js"
   },
   {
     "revision": "0d877bcd705d69aeb3f0",
