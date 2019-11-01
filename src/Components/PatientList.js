@@ -144,7 +144,7 @@ function PatientList() {
             variant="info"
             onClick={() => togglePatientView()}
           >
-            Tillbaka till översikt
+            Tillbaka
         </Button>
           <Patient
             addTodosState={addTodosState}
