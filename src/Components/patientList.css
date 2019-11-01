@@ -4,13 +4,20 @@
 }
 .card-title {
   font-size: 1.75rem;
-  margin: 3rem 0;
+  margin: 10px 0;
 }
 /* .card-body div:first-of-type button {
   position: absolute;
   right: 58px;
   top: 10px;
 } */
+.card-body {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
 input[type=checkbox] {
   width: 25px;
   height: 25px;
@@ -42,6 +49,7 @@ input[type=checkbox] {
   margin-top: 0;
 }
 .patient__list {
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

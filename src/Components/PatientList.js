@@ -97,12 +97,14 @@ function PatientList() {
                   return (
                     <Card key={patient.id} style={{ minWidth: '25%', flexBasis: '1', margin: '1rem' }}>
                       <Card.Body>
+                        <Card.Title>{patient.title}</Card.Title>
 
                         {patient.activities > 0 ?
-                          <Card.Title style={{ color: '#dc3545' }}>{patient.title} - {patient.activities}</Card.Title>
+                          <Card.Title style={{ color: '#dc3545', marginBottom: '30px' }}>Todos - {patient.activities}</Card.Title>
                           :
-                          <Card.Title>{patient.title} - {patient.activities}</Card.Title>
+                          <Card.Title style={{ marginBottom: '30px' }}>Todos - {patient.activities}</Card.Title>
                         }
+
                         {/* <Card.Text>Some quick example text.</Card.Text> */}
                         <div style={{ display: 'flex', justifyContent: 'space-around' }}>
 

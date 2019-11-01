@@ -1,16 +1,16 @@
 .red, .green, .yellow {
   font-size: 2rem;
 }
-.red, .red:hover {
-  background: #dc3545;
+.red, .red:hover, .red:active {
+  background-color: #dc3545!important;
   border-color: #dc3545;
 }
-.green, .green:hover {
-  background: #28a745;
+.green, .green:hover, .green:active {
+  background-color: #28a745!important;
   border-color: #28a745;
 }
-.yellow, .yellow:hover {
-  background: #ffc107;
+.yellow, .yellow:hover, .yellow:active {
+  background-color: #ffc107!important;
   border-color: #ffc107;
   color: #212529;
 }
